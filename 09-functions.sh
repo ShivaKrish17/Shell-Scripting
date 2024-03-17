@@ -6,16 +6,20 @@ DATE=$(date +%F)
 SCRIPT_NAME=$0
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
+RED="\3[31m"
+GREEN="\e[32m"
+NO_COLOUR="\e[0m"
+
 # This Function to Validate the Previous Command and inforrm user whether it is success or failure
 VALIDATE(){
     # $1 -> it will receive first argument 
 
     if [ $1 -ne 0 ]
     then 
-        echo "Installation of $2 is error"
+        echo "Installation of $2 is $RED error $NO_COLOUR"
         exit 1
     else
-        echo "Installation of $2 is Success"    
+        echo "Installation of $2 is $GREEN Success $NO_COLOUR"    
     fi  
 }
 
