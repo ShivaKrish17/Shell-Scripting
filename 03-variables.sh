@@ -2,8 +2,8 @@
 
 echo "Hello World"
 
-PERSON1=$1
-PERSON2=$2 
+PERSON1=$1   # This is first line from command line
+PERSON2=$2   # This is second line from command line
 
 echo "$PERSON1: Oh? Bob!" 
 
