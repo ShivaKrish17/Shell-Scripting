@@ -23,4 +23,3 @@ done
 #Implement Validations through Functions
 #Your Script should check package is already installed or not. If already installed print yellow colour
 #If Installed, just print package is already installed. It should not run install command
-
