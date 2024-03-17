@@ -9,6 +9,8 @@ N="\e[0m"
 if [ $USERID -ne 0 ]
 then
     echo -e "$R ERROR:: Please run this script with Root Access $N"
+    exit 1
+fi    
 
 # All argumnets are in $@        Package names given from commandline eg: sh 12-loops.sh mysql git
 for i in $@
