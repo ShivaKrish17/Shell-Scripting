@@ -6,3 +6,5 @@ PERSONS=("Ramesh" "Suresh" "Naresh")
 #Inside array we always refer values with index and it starts from 0
 
 echo "First Person: ${PERSONS[0]}"
+
+echo "All Persons: ${PERSONS[@]}" # @ means all
