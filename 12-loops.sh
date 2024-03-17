@@ -31,7 +31,7 @@ fi
 # All argumnets are in $@        Package names given from commandline eg: sh 12-loops.sh mysql git
 for i in $@
 do
-    yum list installed git $i &>> $LOG_FILE
+    yum list installed $i &>> $LOG_FILE
     if [ $? -ne 0 ]
     then
         echo "$i is not installed, let's install it"
