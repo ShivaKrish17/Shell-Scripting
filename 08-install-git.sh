@@ -30,5 +30,5 @@ then
     echo "Installation of MySQL is error"
     exit 1
 else
-    echo "Installation of MySQL is error"    
+    echo "Installation of MySQL is Success"    
 fi  
