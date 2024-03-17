@@ -30,11 +30,11 @@ fi
 
 #It is our responsibility to check if installation is success or not
 
-yum install git -y & >> $LOGFILE
+yum install git -y &>> $LOGFILE       # No Space should be there between & and >>
 
 VALIDATE $? "Git" 
 
-yum install mysql -y & >> $LOGFILE
+yum install mysql -y &>> $LOGFILE     # No Space should be there between & and >>
 
 VALIDATE $? "MySQL"  
 
