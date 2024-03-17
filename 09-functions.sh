@@ -2,7 +2,9 @@
 
 #Program to install Mysql
 
-USERID=$(id -u)           # id -u returns user id, root has id as 0 
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 # This Function to Validate the Previous Command and inforrm user whether it is success or failure
 VALIDATE(){
@@ -17,6 +19,8 @@ VALIDATE(){
     fi  
 }
 
+USERID=$(id -u)           # id -u returns user id, root has id as 0 
+
 if [ $USERID -ne 0 ]      # -ne: not equal, -eq -> equal operator  
 then
     echo "ERROR: Please Run Script with Root User"
@@ -26,11 +30,11 @@ fi
 
 #It is our responsibility to check if installation is success or not
 
-yum install git -y
+yum install git -y & >> $LOGFILE
 
 VALIDATE $? "Git" 
 
-yum install mysql -y
+yum install mysql -y & >> $LOGFILE
 
 VALIDATE $? "MySQL"  
 
