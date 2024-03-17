@@ -16,10 +16,10 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
     then 
-        echo "Installation of $2 is $RED error $NO_COLOUR"
+        echo -e "Installation of $2 is $RED error $NO_COLOUR"
         exit 1
     else
-        echo "Installation of $2 is $GREEN Success $NO_COLOUR"    
+        echo -e "Installation of $2 is $GREEN Success $NO_COLOUR"    
     fi  
 }
 
@@ -27,7 +27,7 @@ USERID=$(id -u)           # id -u returns user id, root has id as 0
 
 if [ $USERID -ne 0 ]      # -ne: not equal, -eq -> equal operator  
 then
-    echo "ERROR: Please Run Script with Root User"
+    echo -e "$RED ERROR: Please Run Script with Root User $NO_COLOUR"
     exit 15               # 1 - 127 is failure
 fi    
 
